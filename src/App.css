@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+.sendMsg > Input{
+    width: 78%;
+    font-size: 15px;
+    font-weight: 550;
+    margin-left: 0, 0, -3px, 5px;
+    float: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sendMsg > Button{
+    width: 6%;
+    font-size: 15px; 
+    font-weight: 550;
+    margin: 4px 5% -13px 5%;
+    max-width: 200px;
+    border: solid 1px rgb(78, 86, 190) ;
+    background-color: rgb(176, 175, 236);
+    border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.signout{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: #e3e3e7;
+    top: 0;
+    z-index: 10;
+}
+
+.signout > Button{
+    padding: 8px;
+    margin: 8px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: 500;
+    border: solid 1px rgb(78, 86, 190) ;
+    background-color: rgb(183, 182, 235);
+}
+
+img {
+    border-radius: 50%;
+    height: 40px;
+    margin-top: -20px;
+    border: 2px solid black;
   }
+  
+p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-wrap: break-word;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+.msg {
+    display: flex;
+    padding: 20px 10px 0 20px;
+    margin: 20px;
+    border-radius: 3000px;
+    box-shadow: 0 0 10px rgb(164, 164, 164);
+    align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+  
+.sent {
+    background-color: #2d50f0;
+    color: white;
+    border-top-right-radius: 1000px;
+    flex-direction: row-reverse;
+    padding: 10px 10px 0 10px;
+    text-align: end;
+    float: right;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+.received {
+    border: 1px solid lightgray;
+    background-color: #FAFAFA;
+    border-top-left-radius: 1000px;
+    float: left;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+.sendMsg {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    border-top: 1px solid lightgray;
+    margin-left: -5px;
+    padding: 10px 0px 30px 10px;
+    background-color: #e3e3e7;
 }
+  
+.msgs {
+    margin: 65px 0 80px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  @media (max-width: 775px) {
+    p {
+      font-size: 20px;
+    }
+    .sent {
+      padding: 10px 10px 0 10px;
+    }
+    .received {
+      padding: 10px 10px 0 10px;
+    }
+    img {
+      height: 35px;
+      margin-top: -10px;
+    }
+    .signout > Button{
+      padding: 7px;
+      margin: 7px;
+      font-size: 17px;
+      border-radius: 10px;
+      font-weight: 300;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    p {
+      font-size: 15px;
+    }
+    .sent {
+      padding: 7px 7px 0 7px;
+    }
+    .received {
+      padding: 7px 7px 0 7px;
+    }
+    img {
+      height: 30px;
+      margin-top: -7px;
+    }
+    .signout > Button{
+      padding: 7px;
+      margin: 7px;
+      font-size: 15px;
+      border-radius: 10px;
+      font-weight: 400;
+    }
+
+  }
